@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | Salati & Athkari</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@300;400;500;600;700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #D4AF37;
+            --gold-light: #F5E6B8;
+            --dark-bg: #0A0A14;
+            --dark-card: #12121E;
+            --green: #1B8C5A;
+            --text-light: #E8E8F0;
+            --text-muted: #9090A8;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Tajawal', 'Inter', sans-serif;
+            background: var(--dark-bg);
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+        body[dir="ltr"] { font-family: 'Inter', 'Tajawal', sans-serif; }
+
+        .lang-switch {
+            position: fixed; top: 20px; left: 20px; z-index: 1000;
+            display: flex; gap: 8px;
+            background: rgba(18,18,30,0.9); backdrop-filter: blur(10px);
+            padding: 6px; border-radius: 12px;
+            border: 1px solid rgba(212,175,55,0.2);
+        }
+        [dir="ltr"] .lang-switch { left: auto; right: 20px; }
+        .lang-btn {
+            padding: 6px 16px; border: none; border-radius: 8px; cursor: pointer;
+            font-size: 14px; font-weight: 600; transition: all 0.3s;
+            background: transparent; color: var(--text-muted);
+        }
+        .lang-btn.active { background: var(--gold); color: var(--dark-bg); }
+
+        .container {
+            max-width: 800px; margin: 0 auto; padding: 100px 24px 60px;
+        }
+        .back-link {
+            display: inline-block; color: var(--gold); text-decoration: none;
+            margin-bottom: 30px; font-size: 0.95rem;
+        }
+        .back-link:hover { opacity: 0.7; }
+        h1 {
+            font-family: 'Amiri', serif; font-size: 2.2rem; color: var(--gold);
+            margin-bottom: 12px;
+        }
+        .last-updated {
+            color: var(--text-muted); font-size: 0.9rem; margin-bottom: 40px;
+        }
+        h2 {
+            font-size: 1.3rem; color: var(--gold-light); margin-top: 36px; margin-bottom: 12px;
+        }
+        p, li {
+            color: var(--text-muted); margin-bottom: 12px; font-size: 1rem;
+        }
+        ul { padding-inline-start: 24px; margin-bottom: 16px; }
+        li { margin-bottom: 6px; }
+        .highlight-box {
+            background: var(--dark-card); border: 1px solid rgba(27,140,90,0.3);
+            border-radius: 16px; padding: 24px; margin: 24px 0;
+        }
+        .highlight-box p { color: var(--text-light); font-weight: 500; }
+
+        body[lang="en"] .ar-text { display: none; }
+        body[lang="ar"] .en-text { display: none; }
+
+        footer {
+            text-align: center; padding: 40px 20px; color: var(--text-muted);
+            font-size: 0.85rem; opacity: 0.6;
+        }
+    </style>
+</head>
+<body lang="ar" dir="rtl">
+
+    <div class="lang-switch">
+        <button class="lang-btn active" onclick="setLang('ar')">العربية</button>
+        <button class="lang-btn" onclick="setLang('en')">English</button>
+    </div>
+
+    <div class="container">
+        <a href="index.html" class="back-link">
+            <span class="ar-text">&#8592; الرجوع للرئيسية</span>
+            <span class="en-text">&#8592; Back to Home</span>
+        </a>
+
+        <h1>
+            <span class="ar-text">سياسة الخصوصية</span>
+            <span class="en-text">Privacy Policy</span>
+        </h1>
+        <p class="last-updated">
+            <span class="ar-text">آخر تحديث: فبراير 2025</span>
+            <span class="en-text">Last updated: February 2025</span>
+        </p>
+
+        <div class="highlight-box">
+            <p>
+                <span class="ar-text">&#128274; تطبيق "صلاتي وأذكاري" يحترم خصوصيتك تماماً. لا إعلانات، لا تتبع، لا بيع بيانات.</span>
+                <span class="en-text">&#128274; "Salati & Athkari" fully respects your privacy. No ads, no tracking, no data selling.</span>
+            </p>
+        </div>
+
+        <!-- Section 1 -->
+        <h2>
+            <span class="ar-text">1. المعلومات التي نجمعها</span>
+            <span class="en-text">1. Information We Collect</span>
+        </h2>
+        <p>
+            <span class="ar-text">تطبيق "صلاتي وأذكاري" لا يجمع أي بيانات شخصية ولا يخزنها على خوادم خارجية. جميع البيانات تُحفظ محلياً على جهازك فقط.</span>
+            <span class="en-text">"Salati & Athkari" does not collect any personal data and does not store it on external servers. All data is saved locally on your device only.</span>
+        </p>
+
+        <!-- Section 2 -->
+        <h2>
+            <span class="ar-text">2. الأذونات المستخدمة</span>
+            <span class="en-text">2. Permissions Used</span>
+        </h2>
+
+        <p><strong>
+            <span class="ar-text">&#128205; الموقع الجغرافي (أثناء الاستخدام فقط)</span>
+            <span class="en-text">&#128205; Location (While Using the App Only)</span>
+        </strong></p>
+        <ul>
+            <li>
+                <span class="ar-text">يُستخدم حصرياً لحساب مواقيت الصلاة الدقيقة واتجاه القبلة</span>
+                <span class="en-text">Used exclusively to calculate accurate prayer times and Qibla direction</span>
+            </li>
+            <li>
+                <span class="ar-text">لا يتم إرسال موقعك إلى أي خادم خارجي</span>
+                <span class="en-text">Your location is never sent to any external server</span>
+            </li>
+            <li>
+                <span class="ar-text">يمكنك إلغاء الإذن في أي وقت من إعدادات الجهاز</span>
+                <span class="en-text">You can revoke this permission at any time from device settings</span>
+            </li>
+        </ul>
+
+        <p><strong>
+            <span class="ar-text">&#128276; الإشعارات</span>
+            <span class="en-text">&#128276; Notifications</span>
+        </strong></p>
+        <ul>
+            <li>
+                <span class="ar-text">تُستخدم فقط لتنبيهك بأوقات الصلاة وتذكيرات الأذكار</span>
+                <span class="en-text">Used only to alert you about prayer times and Athkar reminders</span>
+            </li>
+            <li>
+                <span class="ar-text">لا نرسل أي إشعارات تسويقية أو ترويجية</span>
+                <span class="en-text">We never send any marketing or promotional notifications</span>
+            </li>
+        </ul>
+
+        <p><strong>
+            <span class="ar-text">&#127925; الصوت (في الخلفية)</span>
+            <span class="en-text">&#127925; Audio (Background)</span>
+        </strong></p>
+        <ul>
+            <li>
+                <span class="ar-text">يُستخدم لتشغيل تلاوة القرآن الكريم وصوت الأذان في الخلفية</span>
+                <span class="en-text">Used to play Quran recitation and Adhan sound in the background</span>
+            </li>
+        </ul>
+
+        <!-- Section 3 -->
+        <h2>
+            <span class="ar-text">3. مشاركة البيانات</span>
+            <span class="en-text">3. Data Sharing</span>
+        </h2>
+        <p>
+            <span class="ar-text">نحن لا نشارك أي بيانات مع أطراف ثالثة. لا يوجد في التطبيق:</span>
+            <span class="en-text">We do not share any data with third parties. The app contains:</span>
+        </p>
+        <ul>
+            <li>
+                <span class="ar-text">لا إعلانات</span>
+                <span class="en-text">No advertisements</span>
+            </li>
+            <li>
+                <span class="ar-text">لا أدوات تتبع أو تحليلات</span>
+                <span class="en-text">No tracking tools or analytics</span>
+            </li>
+            <li>
+                <span class="ar-text">لا بيع أو تأجير للبيانات</span>
+                <span class="en-text">No selling or renting of data</span>
+            </li>
+            <li>
+                <span class="ar-text">لا تسجيل دخول أو حسابات مستخدمين</span>
+                <span class="en-text">No login or user accounts</span>
+            </li>
+        </ul>
+
+        <!-- Section 4 -->
+        <h2>
+            <span class="ar-text">4. الاتصال بالإنترنت</span>
+            <span class="en-text">4. Internet Connection</span>
+        </h2>
+        <p>
+            <span class="ar-text">يستخدم التطبيق الإنترنت فقط لـ:</span>
+            <span class="en-text">The app uses the internet only for:</span>
+        </p>
+        <ul>
+            <li>
+                <span class="ar-text">تحميل تلاوات القرآن الكريم الصوتية</span>
+                <span class="en-text">Downloading Quran audio recitations</span>
+            </li>
+            <li>
+                <span class="ar-text">التحقق من التقويم الهجري</span>
+                <span class="en-text">Verifying the Hijri calendar date</span>
+            </li>
+            <li>
+                <span class="ar-text">التحقق من وجود تحديثات للتطبيق</span>
+                <span class="en-text">Checking for app updates</span>
+            </li>
+        </ul>
+
+        <!-- Section 5 -->
+        <h2>
+            <span class="ar-text">5. أمان البيانات</span>
+            <span class="en-text">5. Data Security</span>
+        </h2>
+        <p>
+            <span class="ar-text">جميع بياناتك (الإعدادات، المفضلات، التقدم في الأذكار) محفوظة محلياً على جهازك فقط ومحمية بنظام أمان iOS.</span>
+            <span class="en-text">All your data (settings, favorites, Athkar progress) is stored locally on your device only and protected by iOS security system.</span>
+        </p>
+
+        <!-- Section 6 -->
+        <h2>
+            <span class="ar-text">6. خصوصية الأطفال</span>
+            <span class="en-text">6. Children's Privacy</span>
+        </h2>
+        <p>
+            <span class="ar-text">التطبيق آمن تماماً للأطفال. لا نجمع أي بيانات من أي مستخدم بغض النظر عن عمره.</span>
+            <span class="en-text">The app is completely safe for children. We do not collect any data from any user regardless of age.</span>
+        </p>
+
+        <!-- Section 7 -->
+        <h2>
+            <span class="ar-text">7. تحديثات السياسة</span>
+            <span class="en-text">7. Policy Updates</span>
+        </h2>
+        <p>
+            <span class="ar-text">قد نقوم بتحديث سياسة الخصوصية هذه من وقت لآخر. سنقوم بنشر أي تغييرات على هذه الصفحة مع تحديث التاريخ.</span>
+            <span class="en-text">We may update this privacy policy from time to time. We will post any changes on this page with an updated date.</span>
+        </p>
+
+        <!-- Section 8 -->
+        <h2>
+            <span class="ar-text">8. تواصل معنا</span>
+            <span class="en-text">8. Contact Us</span>
+        </h2>
+        <p>
+            <span class="ar-text">إذا كان لديك أي أسئلة حول سياسة الخصوصية، تواصل معنا:</span>
+            <span class="en-text">If you have any questions about this privacy policy, contact us:</span>
+        </p>
+        <p>
+            <span class="ar-text">البريد الإلكتروني: <a href="mailto:support@salaati.app" style="color: var(--gold);">support@salaati.app</a></span>
+            <span class="en-text">Email: <a href="mailto:support@salaati.app" style="color: var(--gold);">support@salaati.app</a></span>
+        </p>
+    </div>
+
+    <footer>
+        <span class="ar-text">&copy; 2025 صلاتي وأذكاري. جميع الحقوق محفوظة.</span>
+        <span class="en-text">&copy; 2025 Salati & Athkari. All rights reserved.</span>
+    </footer>
+
+    <script>
+        function setLang(lang) {
+            document.body.setAttribute('lang', lang);
+            document.body.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>
