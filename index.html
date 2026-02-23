@@ -27,12 +27,19 @@
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
+        html {
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+        }
+
         body {
             font-family: 'Tajawal', 'Inter', sans-serif;
             background: var(--dark-bg);
             color: var(--text-light);
             overflow-x: hidden;
             line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
         body[dir="ltr"] { font-family: 'Inter', 'Tajawal', sans-serif; }
@@ -144,7 +151,6 @@
         }
 
         .download-btn:hover {
-            transform: translateY(-3px);
             box-shadow: 0 15px 50px rgba(212, 175, 55, 0.4);
         }
 
@@ -205,12 +211,12 @@
             border: 1px solid rgba(212, 175, 55, 0.1);
             border-radius: 20px;
             padding: 32px;
-            transition: all 0.3s;
+            transition: border-color 0.3s, box-shadow 0.3s;
+            will-change: auto;
         }
 
         .feature-card:hover {
             border-color: rgba(212, 175, 55, 0.3);
-            transform: translateY(-4px);
             box-shadow: 0 12px 40px rgba(0,0,0,0.3);
         }
 
@@ -589,7 +595,7 @@
     <script>
         // Generate stars
         const starsEl = document.getElementById('stars');
-        for (let i = 0; i < 60; i++) {
+        for (let i = 0; i < 25; i++) {
             const star = document.createElement('div');
             star.className = 'star';
             star.style.left = Math.random() * 100 + '%';
