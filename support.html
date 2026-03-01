@@ -28,15 +28,15 @@
 
         .lang-switch {
             position: fixed; top: 20px; left: 20px; z-index: 1000;
-            display: flex; gap: 8px;
+            display: flex; gap: 6px; flex-wrap: wrap;
             background: rgba(18,18,30,0.9); backdrop-filter: blur(10px);
             padding: 6px; border-radius: 12px;
             border: 1px solid rgba(212,175,55,0.2);
         }
         [dir="ltr"] .lang-switch { left: auto; right: 20px; }
         .lang-btn {
-            padding: 6px 16px; border: none; border-radius: 8px; cursor: pointer;
-            font-size: 14px; font-weight: 600; transition: all 0.3s;
+            padding: 6px 14px; border: none; border-radius: 8px; cursor: pointer;
+            font-size: 13px; font-weight: 600; transition: all 0.3s;
             background: transparent; color: var(--text-muted);
         }
         .lang-btn.active { background: var(--gold); color: var(--dark-bg); }
@@ -101,8 +101,21 @@
         }
         .faq-a { color: var(--text-muted); font-size: 0.95rem; }
 
-        body[lang="en"] .ar-text { display: none; }
-        body[lang="ar"] .en-text { display: none; }
+        body[lang="ar"] .en-text,
+        body[lang="ar"] .tr-text,
+        body[lang="ar"] .fr-text { display: none; }
+
+        body[lang="en"] .ar-text,
+        body[lang="en"] .tr-text,
+        body[lang="en"] .fr-text { display: none; }
+
+        body[lang="tr"] .ar-text,
+        body[lang="tr"] .en-text,
+        body[lang="tr"] .fr-text { display: none; }
+
+        body[lang="fr"] .ar-text,
+        body[lang="fr"] .en-text,
+        body[lang="fr"] .tr-text { display: none; }
 
         footer {
             text-align: center; padding: 40px 20px; color: var(--text-muted);
@@ -115,21 +128,29 @@
     <div class="lang-switch">
         <button class="lang-btn active" onclick="setLang('ar')">العربية</button>
         <button class="lang-btn" onclick="setLang('en')">English</button>
+        <button class="lang-btn" onclick="setLang('tr')">Türkçe</button>
+        <button class="lang-btn" onclick="setLang('fr')">Français</button>
     </div>
 
     <div class="container">
         <a href="index.html" class="back-link">
             <span class="ar-text">&#8592; الرجوع للرئيسية</span>
             <span class="en-text">&#8592; Back to Home</span>
+            <span class="tr-text">&#8592; Ana Sayfaya Dön</span>
+            <span class="fr-text">&#8592; Retour à l'accueil</span>
         </a>
 
         <h1>
             <span class="ar-text">الدعم والتواصل</span>
             <span class="en-text">Support & Contact</span>
+            <span class="tr-text">Destek ve İletişim</span>
+            <span class="fr-text">Support et Contact</span>
         </h1>
         <p class="subtitle">
             <span class="ar-text">نحن هنا لمساعدتك. لا تتردد في التواصل معنا لأي سؤال أو اقتراح.</span>
             <span class="en-text">We're here to help. Don't hesitate to reach out for any question or suggestion.</span>
+            <span class="tr-text">Yardım etmek için buradayız. Herhangi bir soru veya öneri için bize ulaşmaktan çekinmeyin.</span>
+            <span class="fr-text">Nous sommes là pour vous aider. N'hésitez pas à nous contacter pour toute question ou suggestion.</span>
         </p>
 
         <!-- Contact Cards -->
@@ -139,11 +160,15 @@
                 <div class="contact-label">
                     <span class="ar-text">نموذج التواصل</span>
                     <span class="en-text">Contact Form</span>
+                    <span class="tr-text">İletişim Formu</span>
+                    <span class="fr-text">Formulaire de Contact</span>
                 </div>
                 <div class="contact-value">
                     <a href="https://forms.gle/UkduKfHotWRCwm27A" target="_blank">
                         <span class="ar-text">اضغط هنا للتواصل معنا</span>
                         <span class="en-text">Click Here to Contact Us</span>
+                        <span class="tr-text">Bize Ulaşmak İçin Tıklayın</span>
+                        <span class="fr-text">Cliquez ici pour nous contacter</span>
                     </a>
                 </div>
             </div>
@@ -153,16 +178,22 @@
         <h2>
             <span class="ar-text">الأسئلة الشائعة</span>
             <span class="en-text">Frequently Asked Questions</span>
+            <span class="tr-text">Sık Sorulan Sorular</span>
+            <span class="fr-text">Questions Fréquentes</span>
         </h2>
 
         <div class="faq-item">
             <div class="faq-q">
                 <span class="ar-text">أوقات الصلاة غير دقيقة في منطقتي، ماذا أفعل؟</span>
                 <span class="en-text">Prayer times are not accurate in my area, what should I do?</span>
+                <span class="tr-text">Bölgemde namaz vakitleri doğru değil, ne yapmalıyım?</span>
+                <span class="fr-text">Les horaires de prière ne sont pas précis dans ma région, que faire ?</span>
             </div>
             <div class="faq-a">
                 <span class="ar-text">اذهب إلى الإعدادات واختر طريقة الحساب المناسبة لمنطقتك. تأكد أيضاً من تفعيل إذن الموقع للتطبيق.</span>
                 <span class="en-text">Go to Settings and choose the calculation method appropriate for your region. Also make sure location permission is enabled for the app.</span>
+                <span class="tr-text">Ayarlar'a gidin ve bölgenize uygun hesaplama yöntemini seçin. Ayrıca uygulama için konum izninin etkin olduğundan emin olun.</span>
+                <span class="fr-text">Allez dans les Paramètres et choisissez la méthode de calcul adaptée à votre région. Assurez-vous également que l'autorisation de localisation est activée pour l'application.</span>
             </div>
         </div>
 
@@ -170,10 +201,14 @@
             <div class="faq-q">
                 <span class="ar-text">لا تصلني إشعارات الصلاة، كيف أحل المشكلة؟</span>
                 <span class="en-text">I'm not receiving prayer notifications, how do I fix this?</span>
+                <span class="tr-text">Namaz bildirimlerini almıyorum, bunu nasıl düzeltebilirim?</span>
+                <span class="fr-text">Je ne reçois pas les notifications de prière, comment résoudre ce problème ?</span>
             </div>
             <div class="faq-a">
                 <span class="ar-text">تأكد من تفعيل الإشعارات في إعدادات الجهاز > التطبيقات > صلاتي وأذكاري > الإشعارات. تأكد أيضاً أن وضع التركيز (Focus Mode) لا يمنع الإشعارات.</span>
                 <span class="en-text">Make sure notifications are enabled in Device Settings > Apps > Salati & Athkari > Notifications. Also check that Focus Mode is not blocking notifications.</span>
+                <span class="tr-text">Cihaz Ayarları > Uygulamalar > Salati & Athkari > Bildirimler bölümünde bildirimlerin etkin olduğundan emin olun. Ayrıca Odaklanma Modu'nun bildirimleri engellemediğini kontrol edin.</span>
+                <span class="fr-text">Assurez-vous que les notifications sont activées dans Réglages > Apps > Salati & Athkari > Notifications. Vérifiez également que le mode Concentration ne bloque pas les notifications.</span>
             </div>
         </div>
 
@@ -181,10 +216,14 @@
             <div class="faq-q">
                 <span class="ar-text">هل التطبيق يحتوي على إعلانات؟</span>
                 <span class="en-text">Does the app contain ads?</span>
+                <span class="tr-text">Uygulamada reklam var mı?</span>
+                <span class="fr-text">L'application contient-elle des publicités ?</span>
             </div>
             <div class="faq-a">
                 <span class="ar-text">لا، التطبيق مجاني تماماً وخالٍ من الإعلانات. نسأل الله أن يكون صدقة جارية.</span>
                 <span class="en-text">No, the app is completely free and ad-free. We ask Allah to accept it as ongoing charity (Sadaqah Jariyah).</span>
+                <span class="tr-text">Hayır, uygulama tamamen ücretsiz ve reklamsızdır. Allah'tan sadaka-i cariye olarak kabul etmesini dileriz.</span>
+                <span class="fr-text">Non, l'application est entièrement gratuite et sans publicité. Nous demandons à Allah de l'accepter comme charité continue (Sadaqa Jariya).</span>
             </div>
         </div>
 
@@ -192,10 +231,14 @@
             <div class="faq-q">
                 <span class="ar-text">كيف أغير لغة التطبيق؟</span>
                 <span class="en-text">How do I change the app language?</span>
+                <span class="tr-text">Uygulama dilini nasıl değiştiririm?</span>
+                <span class="fr-text">Comment changer la langue de l'application ?</span>
             </div>
             <div class="faq-a">
-                <span class="ar-text">اذهب إلى الإعدادات داخل التطبيق واختر اللغة المفضلة (العربية أو الإنجليزية).</span>
-                <span class="en-text">Go to Settings inside the app and select your preferred language (Arabic or English).</span>
+                <span class="ar-text">اذهب إلى الإعدادات داخل التطبيق واختر اللغة المفضلة. التطبيق يدعم ٥ لغات: العربية، الإنجليزية، التركية، الفرنسية، والأردية.</span>
+                <span class="en-text">Go to Settings inside the app and select your preferred language. The app supports 5 languages: Arabic, English, Turkish, French, and Urdu.</span>
+                <span class="tr-text">Uygulama içindeki Ayarlar'a gidin ve tercih ettiğiniz dili seçin. Uygulama 5 dili destekler: Arapça, İngilizce, Türkçe, Fransızca ve Urduca.</span>
+                <span class="fr-text">Allez dans les Paramètres de l'application et sélectionnez votre langue préférée. L'application prend en charge 5 langues : arabe, anglais, turc, français et ourdou.</span>
             </div>
         </div>
 
@@ -203,10 +246,14 @@
             <div class="faq-q">
                 <span class="ar-text">هل يمكنني تحميل تلاوات القرآن والاستماع بدون إنترنت؟</span>
                 <span class="en-text">Can I download Quran recitations and listen offline?</span>
+                <span class="tr-text">Kur'an tilavetlerini indirip çevrimdışı dinleyebilir miyim?</span>
+                <span class="fr-text">Puis-je télécharger les récitations du Coran et les écouter hors ligne ?</span>
             </div>
             <div class="faq-a">
                 <span class="ar-text">نعم، يمكنك تحميل السور والاستماع إليها بدون اتصال بالإنترنت.</span>
                 <span class="en-text">Yes, you can download surahs and listen to them without an internet connection.</span>
+                <span class="tr-text">Evet, sureleri indirebilir ve internet bağlantısı olmadan dinleyebilirsiniz.</span>
+                <span class="fr-text">Oui, vous pouvez télécharger les sourates et les écouter sans connexion Internet.</span>
             </div>
         </div>
 
@@ -215,6 +262,8 @@
     <footer>
         <span class="ar-text">&copy; 2025 صلاتي وأذكاري. جميع الحقوق محفوظة.</span>
         <span class="en-text">&copy; 2025 Salati & Athkari. All rights reserved.</span>
+        <span class="tr-text">&copy; 2025 Salati & Athkari. Tüm hakları saklıdır.</span>
+        <span class="fr-text">&copy; 2025 Salati & Athkari. Tous droits réservés.</span>
     </footer>
 
     <script>
